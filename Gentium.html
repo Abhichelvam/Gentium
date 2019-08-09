@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Biryani:700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <style>
+    #mainhead {
+      font-size: 40px;
+      color: white;
+    }
+
+    .container-fluid {
+      padding: 0px 100px;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+
+    #nav-links li a {
+      color: white;
+      font-size: 17px;
+      text-decoration: none;
+    }
+    #mainnav {
+      border-radius: 0px;
+    }
+
+    .content1 {
+      background-color: black;
+      width: 100%;
+      height: 920px;
+      margin-top: -20px;
+      padding: 20px 100px 0px 100px;
+    }
+
+    #mainnav {
+      background-color: black;
+    }
+
+    .btns-container {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    .btn {
+      font-family: 'Biryani', sans-serif;
+      display: inline-block;
+      padding: 20px 40px;
+      border: 2px solid transparent;
+      border-radius: 0%;
+      box-sizing: border-box;
+      font-size: 1em;
+      text-align: center;
+      text-decoration: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      white-space: nowrap;
+      margin-top: 30px;
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      border-color: #e9204f;
+      background-color: #e9204f;
+      background-size: 0 100%;
+      background-image: linear-gradient(to left, #e9204f, #e9204f);
+      background-repeat: no-repeat;
+      transition: all 0.5s;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+      border-color: #e9204f;
+      background-color: #e9204f;
+      background-image: linear-gradient(to right, #e9204f, #e9204f);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transition: all 0.5s;
+    }
+
+    .btn-secondary {
+      color: #ffffff;
+      border-color: #e9204f;
+      background-color: transparent;
+      background-size: 0 100%;
+      background-image: linear-gradient(to left, #e9204f, #e9204f);
+      background-repeat: no-repeat;
+      transition: all 0.5s;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus,
+    .btn-secondary:active {
+      color: #ffffff;
+      background-color: transparent;
+      background-image: linear-gradient(to right, #e9204f, #e9204f);
+      background-repeat: no-repeat;
+      border: 2px solid #e9204f;
+      background-size: 100% 100%;
+      transition: all 0.5s;
+    }
+
+    #mainh {
+      font-size: 80px;
+      color: white;
+      font-family: 'Biryani', sans-serif;
+      margin-top: 40px;
+    }
+
+    #horiline {
+      margin-left: 0px;
+      margin-top: 100px;
+    }
+
+    #content1-1 {
+      display: grid;
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2vw;
+      margin-top: 100px;
+    }
+
+    #content1-1 a div {
+      padding: .5em;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #vertiline {
+      margin-left: 50%;
+    }
+
+    #front {
+      z-index: 2;
+      width: 85%;
+    }
+
+    #behind {
+      z-index: 1;
+    }
+
+    #div1 {
+      height: 350px;
+      background-color: rgb(51, 50, 50);
+      padding: 30px;
+      color: aliceblue;
+      font-family: "Briyani";
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #div1:hover {
+      background-color: #E9204F;
+    }
+
+    #div2 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: black;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 20px 100px;
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 20px;
+      background-color: white;
+      padding: 20px;
+    }
+
+    .grid-container>div {
+      background-color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 25px;
+      color: black;
+      position: relative;
+    }
+
+    .grid-container div {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      border: 2px solid #e9204f;
+    }
+
+    .grid-container div:after {
+      content: '\00bb';
+
+    }
+
+    .grid-container div:hover {
+      padding-right: 25px;
+      background-color: #E9204F;
+      position: relative;
+      right: -40px;
+      transition: 0.5s;
+    }
+
+    .grid-container:hover div:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      display: flex;
+    }
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33%);
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left {
+      transform: translateX(0);
+    }
+
+    .image1,
+    .image2,
+    .image3 {
+      opacity: 1;
+      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+      transition: .5s ease;
+      backface-visibility: hidden;
+      float: left;
+      overflow: hidden;
+      filter: grayscale(1);
+      text-align: center;
+      cursor: default;
+    }
+
+    .carousel-item>.image1:hover,
+    .carousel-item>.image2:hover,
+    .carousel-item>.image3:hover {
+      transform: scale(0.9);
+      filter: none;
+    }
+
+    .carousel-item>.image1 a.info,
+    .carousel-item>.image2 a.info,
+    .carousel-item>.image3 a.info {
+      display: inline-block;
+      text-decoration: none;
+      padding: 7px 14px;
+      text-transform: uppercase;
+      color: black;
+      margin: 50px 0 0 0;
+      background-color: transparent;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      font-weight: normal;
+      height: 85%;
+      width: 85%;
+      position: absolute;
+      top: -20%;
+      left: 8%;
+      padding: 70px;
+    }
+
+    .carousel-item>.image1:hover a.info,
+    .carousel-item>.image2:hover a.info,
+    .carousel-item>.image3:hover a.info {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .carousel-item>:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      background-color: #4CAF50;
+      color: black;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+
+    #about {
+      display: grid;
+      grid-template-columns: 800px 300px;
+      grid-template-rows: repeat(2, 400px);
+      grid-gap: 10px;
+    }
+
+    .text {
+      background-color: #4CAF50;
+      color: black;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+
+    .about1 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+    }
+
+    .about2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+    }
+
+    .about3 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+    }
+
+    .imggallery {
+      max-width: 1100px;
+      height: 600px;
+      margin: 50px;
+      padding: 10px;
+    }
+
+    .colourimg {
+      filter: grayscale(1)
+    }
+
+    .colourimg:hover {
+      filter: none;
+    }
+
+    a.info1 {
+      display: inline-block;
+      text-decoration: none;
+      padding: 7px 14px;
+      text-transform: uppercase;
+      color: black;
+      background-color: transparent;
+      font-weight: normal;
+    }
+
+    .who {
+      font-family: "Trade Gothic";
+      margin-left: 20px;
+      color: black;
+      font-size: 20px;
+      margin: 50px;
+    }
+
+    .clients {
+      margin-left: 100px;
+      font-family: "Trade Gothic";
+    }
+
+    .footer {
+      width: 100%;
+      height: 300px;
+      padding: 100px;
+      background-color: black;
+    }
+
+    .fa {
+      padding: 24px;
+      font-size: 20px;
+      width: 20px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 8px;
+      border-radius: 50%;
+
+    }
+
+    .fa:hover {
+      color: #E9204F;
+    }
+
+    .fa-facebook {
+      background: black;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: black;
+      color: white;
+    }
+
+    .fa-google {
+      background: black;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: black;
+      color: white;
+    }
+
+    .vl {
+      height: 95px;
+      margin-left: 50%;
+      border-left: 2px solid #E9204F;
+    }
+  </style>
+  <script>
+    $('#recipeCarousel').carousel({
+      interval: 10000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+
+      for (var i = 0; i < 3; i++) {
+        next = next.next();
+        if (!next.length) {
+          next = $(this).siblings(':first');
+        }
+
+        next.children(':first-child').clone().appendTo($(this));
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse fixed-top" id="mainnav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" id="mainhead" href="#">Gentium.</a>
+      </div>
+      <ul class="nav navbar-custom navbar-right" id="nav-links">
+        <li class="nav-item"><a href="#">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#">Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#">Works&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#">Client&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#">Blog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#">Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="nav-item"><a href="#"><i class="fa fa-search" style="margin-top: -20px"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content1">
+    <div id="behind" style="position:relative;"><img style="float:right"
+        src="http://gentium.pixerex.com/html/demo/assets/images/hero_02.jpg" width="50%"></div>
+    <div id="front" style="position: absolute;">
+      <hr id="horiline" width="50px" style="border: 2px solid #e9204f">
+      <h1 id="mainh">We're a Digital <br>Agency</h1>
+      <div class="btn btn-secondary">Getting Started</div>
+      <div id="content1-1">
+        <div id="div1" style="background-color: #E9204F">
+          <i class="fa fa-bar-chart" style="font-size:50px"></i> <br />
+          <h3>Future Vision.</h3>
+          <p>It is a long established fact that readers will be distracted by the readable content of page.</p>
+        </div>
+        <div id="div1">
+          <i class="fa fa-rocket" style="font-size:50px;"></i><br>
+          <h3>Product design</h3>
+          <p>There are many alteration of passages of available,but the majority alteraion in the same form</p>
+        </div>
+        <div id="div1">
+          <i class="fa fa-pie-chart" style="font-size:50px;"></i><br>
+          <h3>Innovative Solutions</h3>
+          <p>The generated Lorem ipsum is therefore always freee from repetition,injected humour</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="service" class="service">
+
+    <h1 style="margin-left: 100px">Services</h1>
+    <h4 style="color:#E9204F;margin-left: 100px;">We Work With You,Not for You</h4>
+
+    <div class="grid-container">
+      <div><a href='#'></a> Digital Strategy</div>
+      <div><a href='#'></a><span> UX Design</span></div>
+      <div><a href='#'></a><span> Product Design</span></div>
+      <div><a href='#'></a><span> Content strategy</span></div>
+      <div><a href='#'></a><span>Design & Concept</span></div>
+      <div><a href='#'></a><span>Social Media</span></div>
+      <div><a href='#'></a><span>Media Planning</span></div>
+      <div><a href='#'></a><span>Brand Identity</span></div>
+      <div><a href='#'></a><span>SEO Optimization</span></div>
+    </div>
+  </div>
+  <div class="vl"></div>
+  <div class="row">
+    <div class="col-md-9">
+      <h1 style="margin-left: 100px">Works</h1>
+    </div>
+
+  </div>
+  <h4 style="color:#e9204f;margin-left: 100px;">Things we have made</h4>
+  <div class="col-md-3" style="margin-left: 1100px;margin-top: -100px;">
+    <div class="btn btn-secondary"><span style="color:black">View All</span></div>
+  </div>
+  <div class="container text-center my-3">
+
+    <div class="row mx-auto my-auto">
+      <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+        <div class="carousel-inner w-100" role="listbox">
+          <div class="carousel-item active">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/01.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Expedia solutions<br>Marketing/App</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/02.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Bikeer<br>Design/Concept</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/04.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Woody<br>Website/Development</a></div>
+
+          </div>
+          <div class="carousel-item">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/02.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Bikeer<br>Design/Concept</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/04.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Woody<br>Website/Development</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/05.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Interior Design<br>Architecture/design</a></div>
+
+          </div>
+          <div class="carousel-item">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/04.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Woody<br>Website/Development</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/05.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Interior Design<br>Architecture/design</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/06.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Electrica<br>UX design/Web app</a></div>
+
+          </div>
+          <div class="carousel-item">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/05.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Interior Design<br>Architecture/design</a>
+            </div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/06.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Electrica<br>UX design/Web app</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/works/01.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Expedia solutions<br>Marketing/App</a></div>
+
+          </div>
+
+
+        </div>
+        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="margin-left:30px">
+    <h1 style="margin-left:60px">About.</h1>
+    <h4 style="color: #e9204f;margin-left:60px"> WE'RE MORE THAN A DIGITAL AGENCY</h4>
+    <div class="imggallery">
+      <div class="row">
+        <div class="col-md-8">
+          <img class="colourimg" src="http://gentium.pixerex.com/html/demo/assets/images/about_01.jpg"
+            style="width:500; height: 600px;">
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <img class="colourimg" src="http://gentium.pixerex.com/html/demo/assets/images/about_02.jpg"
+                style="width:300; height: 300px;"></div>
+            <div class="col-md-12">
+              <img class="colourimg" src="http://gentium.pixerex.com/html/demo/assets/images/about_03.jpg"
+                style="width:300; height: 300px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="who">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Who we are</h3><br>
+          Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going
+          forward will have multiple touchpoints for offshoring.
+        </div>
+
+        <div class="col-md-4">
+          <h3>Our philosophy</h3><br>
+          A new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
+          User generated content in real-time.
+        </div>
+
+        <div class="col-md-4">
+          <h3>How we work</h3><br>
+          Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital
+          divide with additional clickthroughs from DevOps.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clients">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="http://gentium.pixerex.com/html/demo/assets/images/client_02.jpg" style="height: 600px; width:400px;">
+      </div>
+      <div class="col-md-7">
+        <h1> What Clients Say.</h1>
+        <h4 style="color: #e9204f; font-size: 16px;">&nbsp; &nbsp;&nbsp;FROM ALL OVER THE WORLD</h4><br><br><br><br>
+        <h3 style="color: rgb(82, 77, 77);">We are motivated by the satisfaction of our clients. Put your trust in us
+          and share in our growth Asset Management is made up of a team of expert, committed and experienced people with
+          a passion for financial markets. Our goal is to achieve continuous and sustainable growth of our clients.</h3>
+        <br><br>
+        <cite style="color:black;"><b> ARON SMITH, UX DESIGNER</b></cite>
+      </div>
+    </div>
+  </div>
+  <p>
+    <h1 style="margin-left: 100px;">Latest News</h1>
+    <h4 style="color: #e9204f;margin-left: 100px;">Check out some of our thinking</h4>
+  </p>
+
+  <div class="container text-center my-3">
+
+    <div class="row mx-auto my-auto">
+      <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+        <div class="carousel-inner w-100" role="listbox">
+          <div class="carousel-item active">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/01.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Career<br>Winning tactics for a new digital agency</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/02.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Opinion<br>How i improve my digital in one day</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/03.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Design/Ux<br>How to make your product stand out</a></div>
+
+          </div>
+          <div class="carousel-item">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/02.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Opinion<br>How i improve my digital in one day</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/03.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Design/Ux<br>How to make your product stand out</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/04.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Markting<br>choose your meeting speak,client feedback</a></div>
+
+          </div>
+          <div class="carousel-item">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/03.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Design/Ux<br>How to make your product stand
+                out</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/04.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Marketing<br>choose your meeting speak,client feedback</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/05.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Opinion<br>How i improve my digital in one day</a></div>
+
+          </div>
+          <div class="carousel-item">
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/04.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Marketing<br>choose your meeting speak,client
+                feedback</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/05.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Opinion<br>How i improve my digital in one
+                day</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/01.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Career<br>Winning tactics for a new digital agency</a></div>
+
+          </div>
+          <div class="carousel-item">
+
+            <div class="image1"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/05.jpg"
+                style="width:350px; height:250px"><a class="info" href="#">Opinion<br>How i improve my digital in one
+                day</a></div>
+            <div class="image2"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/01.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Career<br>Winning tactics for a new digital agency</a></div>
+            <div class="image3"><img class="d-block col-12 img-fluid"
+                src="http://gentium.pixerex.com/html/demo/assets/images/posts/02.jpg" style="width:350px; height:250px">
+              <a class="info" href="#">Opinion<br>How i improve my digital in one day</a></div>
+
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-2"
+      style="font-size: 38px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">
+      N'Oreal</div>
+    <div class="col-md-2"
+      style="font-size: 38px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif; color: #fff;">
+      norton</div>
+    <div class="col-md-2"
+      style="font-size: 38px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">
+      Vobes</div>
+    <div class="col-md-2"
+      style="font-size: 34px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">
+      FRIDAY.</div>
+    <div class="col-md-2"
+      style="font-size: 30px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">
+      PANTHEON</div>
+    <div class="col-md-2"
+      style="font-size: 32px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">
+      HORUS</div>
+  </div>
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="#" class="fa fa-facebook"></a></span>
+        <a href="#" class="fa fa-twitter"></a></span>
+        <a href="#" class="fa fa-google"></a></span>
+        <a href="#" class="fa fa-linkedin"></a></span>
+      </div>
+      <div class="col-md-4">
+        <h1 style="color:white">Let's Talk?</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="btn btn-secondary">Make an Enquire</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
